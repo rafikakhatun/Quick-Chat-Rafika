@@ -1,4 +1,4 @@
-import { Mail, User } from "lucide-react";
+import { Eye, Mail, User } from "lucide-react";
 import ParticlesBackground from "./ParticlesBackground";
 
 const Login = () => {
@@ -10,24 +10,35 @@ const Login = () => {
 
             {/* Login Form */}
             <div className="relative z-10 flex justify-center items-center h-full">
-                <div className="bg-[#1D2666] p-6 rounded-xl shadow-xl border-gray-50 w-80">
+                <div className="bg-[#1D2666] p-8 rounded-xl shadow-xl border-gray-50 max-w-md w-full">
                     <h2 className="text-xl font-semibold mb-4 text-center text-white drop-shadow ">Quick Chat with Rafika</h2>
                     <form action="" className="space-y-4">
                         {/*UserName */}
-                    <div className="relative w-full">
-                        <label className="text-white" htmlFor="userName">Username</label>
-                        <input type="text" id="userName" placeholder="Enter your name" className="w-full mt-2 px-4 py-2 rounded-md  bg-[#1D2666] outline-none shadow border border-gray-50 text-white " />
-                         <User className="absolute top-10 right-3 items-center text-white" size={20} />
+                        <div className="relative w-full">
+                            <label className="text-white" htmlFor="userName">Username</label>
+                            <input type="text" id="userName" placeholder="Enter your name" className="w-full mt-2 px-4 py-2 rounded-md  bg-[#1D2666] outline-none shadow border-[0.5px] border-gray-50 text-white " />
+                            <User className="absolute top-10 right-3 items-center text-white" size={20} />
 
-                    </div>
+                        </div>
 
-                    {/*Email*/}
-                    <div className="relative w-full">
-                        <label className="text-white" htmlFor="email">Email</label>
-                        <input type="email" id="email" placeholder="Enter your email" className="w-full mt-2 px-4 py-2 rounded-md  bg-[#1D2666] outline-none shadow border border-gray-50 text-white " />
-                         <Mail className="absolute top-10 right-3 items-center text-white" size={20} />
+                        {/*Email*/}
+                        <div className="relative w-full">
+                            <label className="text-white" htmlFor="email">Email</label>
+                            <input type="email" id="email" placeholder="Enter your email" className="w-full mt-2 px-4 py-2 rounded-md  bg-[#1D2666] outline-none shadow border-[0.5px] border-gray-50 text-white " />
+                            <Mail className="absolute top-10 right-3 items-center text-white" size={20} />
 
-                    </div>
+                        </div>
+                        {/*Password*/}
+
+                        
+                        <div className="relative w-full">
+                            <label className="text-white" htmlFor="password">Password</label>
+                            <input type="password" id="password" placeholder="Enter your password" className="w-full mt-2 px-4 py-2 rounded-md  bg-[#1D2666] outline-none shadow border-[0.5px] border-gray-50 text-white " />
+                            <Eye className="absolute top-10 right-3 items-center text-white" size={20} />
+
+                        </div>
+
+                        <button className="w-full bg-blue-700 text-white rounded-md px-4 py-2 font-semibold mt-2">Sign In</button>
                     </form>
 
 
