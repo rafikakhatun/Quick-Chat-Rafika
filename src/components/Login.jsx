@@ -1,8 +1,10 @@
 import { Eye, Mail, User } from "lucide-react";
 import ParticlesBackground from "./ParticlesBackground";
+import { Link } from "react-router-dom";
 
 const Login = () => {
     return (
+
         <div className="relative w-full h-screen overflow-hidden">
 
             {/* Background Particles */}
@@ -10,7 +12,7 @@ const Login = () => {
 
             {/* Login Form */}
             <div className="relative z-10 flex justify-center items-center h-full">
-                <div className="bg-[#1D2666] p-8 rounded-xl shadow-xl border-gray-50 max-w-md w-full">
+                <div className="bg-[#1D2666] p-8 border-[0.5px] border-blue-100 rounded-xl shadow-xl  max-w-md w-full">
                     <h2 className="text-xl font-semibold mb-4 text-center text-white drop-shadow ">Quick Chat with Rafika</h2>
                     <form action="" className="space-y-4">
                         {/*UserName */}
@@ -28,9 +30,9 @@ const Login = () => {
                             <Mail className="absolute top-10 right-3 items-center text-white" size={20} />
 
                         </div>
+
                         {/*Password*/}
 
-                        
                         <div className="relative w-full">
                             <label className="text-white" htmlFor="password">Password</label>
                             <input type="password" id="password" placeholder="Enter your password" className="w-full mt-2 px-4 py-2 rounded-md  bg-[#1D2666] outline-none shadow border-[0.5px] border-gray-50 text-white " />
@@ -38,25 +40,27 @@ const Login = () => {
 
                         </div>
 
-                        <button className="w-full bg-blue-700 text-white rounded-md px-4 py-2 font-semibold mt-2">Sign In</button>
+                        {/*Remember me and forgot password */}
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <input type="checkbox" id="RememberMe" />
+                                <label className="text-white ml-2" htmlFor="RememberMe">Remember Me</label>
+                            </div>
+                            {/* forgot password */}
+        
+                            <div>
+                                <span className="text-blue-500">forgot password</span>
+
+                            </div>
+                        </div>
+
+
+
+                        <button className="w-full bg-blue-600 text-white rounded-md px-4 py-2 font-semibold mt-2">Sign In</button>
                     </form>
 
 
-                    {/* <input
-            type="email"
-            placeholder="Email"
-            className="w-full border p-2 rounded mb-3 bg-[#1D2666] text-white outline-none"
-          />
 
-          <input
-            type="password"
-            placeholder="Password"
-            className="w-full border p-2 rounded mb-3"
-          />
-
-          <button className="w-full bg-blue-600 text-white p-2 rounded mt-2">
-            Sign In
-          </button> */}
                 </div>
             </div>
 
