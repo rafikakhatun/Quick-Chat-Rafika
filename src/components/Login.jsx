@@ -1,8 +1,17 @@
 import { Eye, Mail, User } from "lucide-react";
 import ParticlesBackground from "./ParticlesBackground";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Login = () => {
+
+    // password show/ hide state
+
+    const [showPassword,setShowPassword] = useState(null)
+
+
+
+
     return (
 
         <div className="relative w-full h-screen overflow-hidden">
