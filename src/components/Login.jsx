@@ -1,4 +1,4 @@
-import { Eye, Mail, User } from "lucide-react";
+import { Eye, EyeOff, Mail, User } from "lucide-react";
 import ParticlesBackground from "./ParticlesBackground";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -7,7 +7,7 @@ const Login = () => {
 
     // password show/ hide state
 
-    const [showPassword,setShowPassword] = useState(null)
+    const [showPassword, setShowPassword] = useState(null)
 
 
 
@@ -44,9 +44,14 @@ const Login = () => {
 
                         <div className="relative w-full">
                             <label className="text-white" htmlFor="password">Password</label>
-                            <input type="password" id="password" placeholder="Enter your password" className="w-full mt-2 px-4 py-2 rounded-md  bg-[#1D2666] outline-none shadow border-[0.5px] border-gray-50 text-white " />
-                            <Eye className="absolute top-10 right-3 items-center text-white" size={20} />
-
+                            <input type={showPassword ? "text" : "password"} id="password" placeholder="Enter your password" className="w-full mt-2 px-4 py-2 rounded-md  bg-[#1D2666] outline-none shadow border-[0.5px] border-gray-50 text-white " />
+                            {/* Eye / EyeOff Toggle */}
+                            <div
+                                className="absolute top-10 right-3 cursor-pointer text-white"
+                                onClick={() => setShowPassword(!showPassword)}
+                            >
+                                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                            </div>
                         </div>
 
                         {/*Remember me and forgot password */}
@@ -55,16 +60,13 @@ const Login = () => {
                                 <input type="checkbox" id="RememberMe" />
                                 <label className="text-white ml-2" htmlFor="RememberMe">Remember Me</label>
                             </div>
+
                             {/* forgot password */}
-        
                             <div>
                                 <span className="text-blue-500">forgot password</span>
 
                             </div>
                         </div>
-
-
-
                         <button className="w-full bg-blue-600 text-white rounded-md px-4 py-2 font-semibold mt-2">Sign In</button>
                     </form>
 
