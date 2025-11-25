@@ -5,9 +5,15 @@ import { useState } from "react";
 
 const Login = () => {
 
-    // password show/ hide state
+    // password show hide state
 
-    const [showPassword, setShowPassword] = useState(null)
+    const [showPassword, setShowPassword] = useState(null);
+
+    const handleSubmit = () => {
+        alert("sign In")
+
+
+    }
 
 
 
@@ -67,7 +73,7 @@ const Login = () => {
 
                             </div>
                         </div>
-                        <button className="w-full bg-blue-600 text-white rounded-md px-4 py-2 font-semibold mt-2">Sign In</button>
+                        <button onClick={handleSubmit} className="w-full bg-blue-600 text-white rounded-md px-4 py-2 font-semibold mt-2">Sign In</button>
                     </form>
 
 
