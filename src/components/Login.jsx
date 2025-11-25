@@ -1,6 +1,5 @@
 import { Eye, EyeOff, Mail, User } from "lucide-react";
 import ParticlesBackground from "./ParticlesBackground";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Login = () => {
