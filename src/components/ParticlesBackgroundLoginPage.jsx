@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 
-const ParticlesBackground = () => {
+const ParticlesBackgroundLoginPage = () => {
   const canvasRef = useRef(null);
   const mouseRef = useRef({ x: null, y: null, radius: 180 });
   const particlesRef = useRef([]);
@@ -157,5 +157,5 @@ const ParticlesBackground = () => {
   );
 };
 
-export default ParticlesBackground;
+export default ParticlesBackgroundLoginPage;
 

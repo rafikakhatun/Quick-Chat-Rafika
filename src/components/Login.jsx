@@ -1,7 +1,8 @@
 import { Eye, EyeOff, Mail, User } from "lucide-react";
-import ParticlesBackground from "./ParticlesBackground";
+import ParticlesBackground from "./ParticlesBackgroundLoginPage";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ParticlesBackgroundLoginPage from "./ParticlesBackgroundLoginPage";
 
 const Login = () => {
 
@@ -23,7 +24,7 @@ const Login = () => {
         <div className="relative w-full h-screen overflow-hidden">
 
             {/* Background Particles */}
-            <ParticlesBackground />
+            <ParticlesBackgroundLoginPage />
 
             {/* Login Form */}
             <div className="relative z-10 flex justify-center items-center h-full">
