@@ -3,10 +3,10 @@ import Login from "../components/Login";
 
 const router =createBrowserRouter([
 
-// {
-//     path:"/",
-//     element:<Login></Login>
-// }
+{
+    path:"/",
+    element:<Login></Login>
+}
 
 
 
