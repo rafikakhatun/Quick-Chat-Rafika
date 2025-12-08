@@ -82,7 +82,7 @@ const Login = () => {
 
                     {/* Sign-up prompt for users who don't have an account */}
                     <div className="text-center mt-6 text-sm ">
-                        <p>Don't have an Account?</p>
+                        <p>Don't have an Account? {} <Link className="text-blue-300" to="/register">Register</Link> </p>
 
                     </div>
 
