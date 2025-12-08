@@ -1,6 +1,7 @@
 import { Eye, EyeOff, Mail, User } from "lucide-react";
 import ParticlesBackground from "./ParticlesBackground";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
 
@@ -27,12 +28,12 @@ const Login = () => {
             {/* Login Form */}
             <div className="relative z-10 flex justify-center items-center h-full">
                 <div className="p-8 rounded-xl shadow-xl max-w-md w-full" style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                  color: 'white',
-                  border: '1px solid rgba(255, 255, 255, 0.2)'
+                    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                    color: 'white',
+                    border: '1px solid rgba(255, 255, 255, 0.2)'
                 }}>
                     <h2 className="text-xl font-semibold mb-4 text-center text-white drop-shadow ">Quick Chat with Rafika</h2>
-                    <form action="" className="space-y-4">
+                    <form action="" className="space-y-4 text-sm">
                         {/*UserName */}
                         <div className="relative w-full">
                             <label className="text-white" htmlFor="userName">Username</label>
@@ -72,12 +73,18 @@ const Login = () => {
 
                             {/* forgot password */}
                             <div>
-                                <span className="text-blue-500">forgot password</span>
+                                <span className="text-blue-300">forgot password</span>
 
                             </div>
                         </div>
                         <button onClick={handleSubmit} className="w-full bg-blue-600 text-white rounded-md px-4 py-2 font-semibold mt-2">Sign In</button>
                     </form>
+
+                    {/* Sign-up prompt for users who don't have an account */}
+                    <div className="text-center mt-6 text-sm ">
+                        <p>Don't have an Account?</p>
+
+                    </div>
 
 
 
