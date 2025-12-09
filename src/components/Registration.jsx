@@ -1,6 +1,7 @@
 import React from 'react';
 import SpaceEffectRegisterPage from './SpaceEffectRegisterPage';
 import { Link } from 'react-router-dom';
+import { User } from 'lucide-react';
 
 const Registration = () => {
 
@@ -34,13 +35,14 @@ const Registration = () => {
 
                         <form action="">
                             {/* Name Field */}
-                            <div className='flex flex-col space-y-1'>
+                            <div className='relative flex flex-col space-y-1'>
                                 <label className='text-white' htmlFor="name">Full Name</label>
                                 <input className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
                                     style={{
                                         backgroundColor: 'rgba(30, 14, 63, 0.5)',
                                         border: '1px solid rgba(138, 43, 226, 0.3)'
                                     }} placeholder='Enter Your name' id="name" />
+                                    <User className='absolute text-white top-10 right-3'></User>
                             </div>
 
                             {/* Email Field */}
@@ -81,9 +83,10 @@ const Registration = () => {
                             >
                                 Register
                             </button>
+                            {/* Already have an account? Sign In link */}
 
                             <div className="mt-6 text-center text-sm">
-                                <p className='text-white'>Already have an account? <Link to='/' className="text-purple-700 hover:underline">Sign In</Link></p>
+                                <p className='text-white'>Already have an account? {} <Link to='/' className="text-purple-700 hover:underline">Sign In</Link></p>
                             </div>
 
 
