@@ -35,7 +35,7 @@ const Registration = () => {
                             </div>
 
                             {/* Email Field */}
-                             <div className='flex flex-col space-y-1 mt-5'>
+                            <div className='flex flex-col space-y-1 mt-5'>
                                 <label className='text-white' htmlFor="email">Email Address</label>
                                 <input className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
                                     style={{
@@ -60,7 +60,19 @@ const Registration = () => {
                                 <label className='text-white text-sm' htmlFor="terms">I agree to the <a href="#" className='text-purple-700'>Terms & Condition</a></label>
                             </div>
 
-                            
+                            {/* register button*/}
+                            <button
+                                type="submit"
+                                className="w-full mt-6 py-3 px-4 rounded-lg font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 transition duration-300"
+                                style={{
+                                    background: 'linear-gradient(45deg, #9F2BC1, #4C00FF)',
+                                    boxShadow: '0 4px 15px rgba(76, 0, 255, 0.4)'
+                                }}
+                            >
+                                Register
+                            </button>
+
+
 
 
                         </form>
