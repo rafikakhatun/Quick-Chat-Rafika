@@ -17,7 +17,23 @@ const Registration = () => {
                         border: '1px solid rgba(138, 43, 226, 0.3)',
                         boxShadow: '0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(138, 43, 226, 0.3)'
                     }}>
-                        
+
+                        <h2 className="text-2xl font-semibold mb-4 text-center drop-shadow bg-clip-text text-transparent " style={{
+                            backgroundImage: 'linear-gradient(45deg, #e2b0ff, #9F2BC1, #6bb5ff)',
+                            textShadow: '0 0 10px rgba(138, 43, 226, 0.5)'
+                        }}>Create Account</h2>
+                        <form action="">
+                            {/* Name Field */}
+                            <div className='flex flex-col space-y-2'>
+                                <label className='text-white' htmlFor="name">Full Name</label>
+                                <input className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
+                                    style={{
+                                        backgroundColor: 'rgba(30, 14, 63, 0.5)',
+                                        border: '1px solid rgba(138, 43, 226, 0.3)'
+                                    }} placeholder='Enter Your name' id="name" />
+                            </div>
+                        </form>
+
 
 
                     </div>
