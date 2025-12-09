@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import SpaceEffectRegisterPage from './SpaceEffectRegisterPage';
 import { Link } from 'react-router-dom';
-import { Eye, Mail, User } from 'lucide-react';
+import { Eye, EyeClosed, EyeOff, Mail, User } from 'lucide-react';
 
 const Registration = () => {
 
-    const [showPassword,setShowPassword] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -44,7 +44,7 @@ const Registration = () => {
                                         backgroundColor: 'rgba(30, 14, 63, 0.5)',
                                         border: '1px solid rgba(138, 43, 226, 0.3)'
                                     }} placeholder='Enter Your name' id="name" />
-                                    <User className='absolute text-white top-10 right-3'></User>
+                                <User className='absolute text-white top-10 right-3'></User>
                             </div>
 
                             {/* Email Field */}
@@ -55,18 +55,26 @@ const Registration = () => {
                                         backgroundColor: 'rgba(30, 14, 63, 0.5)',
                                         border: '1px solid rgba(138, 43, 226, 0.3)'
                                     }} placeholder='Enter Your Email' id="email" />
-                                    <Mail className='absolute top-10 right-3 text-white' ></Mail>
+                                <Mail className='absolute top-10 right-3 text-white' ></Mail>
                             </div>
 
                             {/* Password */}
                             <div className='relative flex flex-col space-y-1 mt-5'>
                                 <label className='text-white' htmlFor="password">Password</label>
-                                <input type="password" className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
+                                <input type={showPassword ? "text" : "password"} className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
                                     style={{
                                         backgroundColor: 'rgba(30, 14, 63, 0.5)',
                                         border: '1px solid rgba(138, 43, 226, 0.3)'
-                                    }} placeholder='Enter Your Password' id="password" />
-                                    <Eye className='absolute top-10 right-3 text-white'></Eye>
+                                    }} placeholder='Enter Your Password' id="password"
+
+                                />
+
+                                <div className='absolute top-10 right-3 text-white'
+                                    onClick={() => setShowPassword(!showPassword)}>
+                                    {showPassword ? (<EyeOff></EyeOff>) : (<Eye ></Eye>)}
+
+                                </div>
+
                             </div>
 
                             {/* Terms and Condition*/}
@@ -90,7 +98,7 @@ const Registration = () => {
                             {/* Already have an account? Sign In link */}
 
                             <div className="mt-6 text-center text-sm">
-                                <p className='text-white'>Already have an account? {} <Link to='/' className="text-purple-700 hover:underline">Sign In</Link></p>
+                                <p className='text-white'>Already have an account? { } <Link to='/' className="text-purple-700 hover:underline">Sign In</Link></p>
                             </div>
 
 
