@@ -1,7 +1,16 @@
 import React from 'react';
 import SpaceEffectRegisterPage from './SpaceEffectRegisterPage';
+import { Link } from 'react-router-dom';
 
 const Registration = () => {
+
+    const handleRegister = (e) => {
+        e.preventDefault()
+        alert("Register successfull")
+    }
+
+
+
     return (
         <>
 
@@ -62,6 +71,7 @@ const Registration = () => {
 
                             {/* register button*/}
                             <button
+                                onClick={handleRegister}
                                 type="submit"
                                 className="w-full mt-6 py-3 px-4 rounded-lg font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 transition duration-300"
                                 style={{
@@ -71,6 +81,10 @@ const Registration = () => {
                             >
                                 Register
                             </button>
+
+                            <div className="mt-6 text-center text-sm">
+                                <p className='text-white'>Already have an account? <Link to='/' className="text-purple-700 hover:underline">Sign In</Link></p>
+                            </div>
 
 
 
