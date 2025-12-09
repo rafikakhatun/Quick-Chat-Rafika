@@ -28,11 +28,11 @@ const Login = () => {
 
             {/* Login Form */}
             <div className="relative z-10 flex justify-center items-center h-full">
-                <div className="p-8 rounded-xl shadow-xl max-w-md w-full" style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                    color: 'white',
-                    border: '1px solid rgba(255, 255, 255, 0.2)'
-                }}>
+                <div className="p-8 rounded-xl shadow-xl max-w-md w-full" style={{ 
+            backdropFilter: 'blur(3px)',
+            backgroundColor: 'rgba(255, 255, 255, 0.07)',
+            border: '1px solid rgba(255, 255, 255, 0.15)'
+          }}>
                     <h2 className="text-xl font-semibold mb-4 text-center text-white drop-shadow ">Quick Chat with Rafika</h2>
                     <form action="" className="space-y-4 text-sm">
                         {/*UserName */}
