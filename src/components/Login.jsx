@@ -28,17 +28,21 @@ const Login = () => {
 
             {/* Login Form */}
             <div className="relative z-10 flex justify-center items-center h-full">
-                <div className="p-8 rounded-xl shadow-xl max-w-md w-full" style={{ 
-            backdropFilter: 'blur(3px)',
-            backgroundColor: 'rgba(255, 255, 255, 0.07)',
-            border: '1px solid rgba(255, 255, 255, 0.15)'
-          }}>
+                <div className="p-8 rounded-xl shadow-xl max-w-md w-full" style={{
+                    backdropFilter: 'blur(3px)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.07)',
+                    border: '1px solid rgba(255, 255, 255, 0.15)'
+                }}>
                     <h2 className="text-xl font-semibold mb-4 text-center text-white drop-shadow ">Quick Chat with Rafika</h2>
                     <form action="" className="space-y-4 text-sm">
                         {/*UserName */}
                         <div className="relative w-full">
                             <label className="text-white" htmlFor="userName">Username</label>
-                            <input type="text" id="userName" placeholder="Enter your name" className="w-full mt-2 px-4 py-2 rounded-md  bg-[#1D2666] outline-none shadow border-[0.5px] border-gray-50 text-white " />
+                            <input type="text" id="userName" placeholder="Enter your name" className="w-full mt-2 px-4 py-2 rounded-md  outline-none shadow border-[0.5px] border-gray-50 text-white " style={{
+                                backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                                color: 'white',
+                                border: '1px solid rgba(255, 255, 255, 0.2)'
+                            }} />
                             <User className="absolute top-10 right-3 items-center text-white" size={20} />
 
                         </div>
@@ -46,7 +50,11 @@ const Login = () => {
                         {/*Email*/}
                         <div className="relative w-full">
                             <label className="text-white" htmlFor="email">Email</label>
-                            <input type="email" id="email" placeholder="Enter your email" className="w-full mt-2 px-4 py-2 rounded-md  bg-[#1D2666] outline-none shadow border-[0.5px] border-gray-50 text-white " />
+                            <input type="email" id="email" placeholder="Enter your email" className="w-full mt-2 px-4 py-2 rounded-md  outline-none shadow border-[0.5px] border-gray-50 text-white " style={{
+                                backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                                color: 'white',
+                                border: '1px solid rgba(255, 255, 255, 0.2)'
+                            }} />
                             <Mail className="absolute top-10 right-3 items-center text-white" size={20} />
 
                         </div>
@@ -55,7 +63,11 @@ const Login = () => {
 
                         <div className="relative w-full">
                             <label className="text-white" htmlFor="password">Password</label>
-                            <input type={showPassword ? "text" : "password"} id="password" placeholder="Enter your password" className="w-full mt-2 px-4 py-2 rounded-md  bg-[#1D2666] outline-none shadow border-[0.5px] border-gray-50 text-white " />
+                            <input type={showPassword ? "text" : "password"} id="password" placeholder="Enter your password" className="w-full mt-2 px-4 py-2 rounded-md outline-none shadow border-[0.5px] border-gray-50 text-white " style={{
+                                backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                                color: 'white',
+                                border: '1px solid rgba(255, 255, 255, 0.2)'
+                            }} />
                             {/* Eye / EyeOff Toggle */}
                             <div
                                 className="absolute top-10 right-3 cursor-pointer text-white"
@@ -83,7 +95,7 @@ const Login = () => {
 
                     {/* Sign-up prompt for users who don't have an account */}
                     <div className="text-center mt-6 text-sm ">
-                        <p>Don't have an Account? {} <Link className="text-blue-300" to="/register">Register</Link> </p>
+                        <p className="text-white">Don't have an Account? { } <Link className="text-blue-300" to="/register">Register</Link> </p>
 
                     </div>
 
