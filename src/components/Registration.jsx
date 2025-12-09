@@ -1,7 +1,7 @@
 import React from 'react';
 import SpaceEffectRegisterPage from './SpaceEffectRegisterPage';
 import { Link } from 'react-router-dom';
-import { User } from 'lucide-react';
+import { Mail, User } from 'lucide-react';
 
 const Registration = () => {
 
@@ -46,13 +46,14 @@ const Registration = () => {
                             </div>
 
                             {/* Email Field */}
-                            <div className='flex flex-col space-y-1 mt-5'>
+                            <div className='relative flex flex-col space-y-1 mt-5'>
                                 <label className='text-white' htmlFor="email">Email Address</label>
                                 <input className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
                                     style={{
                                         backgroundColor: 'rgba(30, 14, 63, 0.5)',
                                         border: '1px solid rgba(138, 43, 226, 0.3)'
                                     }} placeholder='Enter Your Email' id="email" />
+                                    <Mail className='absolute top-10 right-3 text-white' ></Mail>
                             </div>
 
                             {/* Password */}
