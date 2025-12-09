@@ -4,6 +4,7 @@ import SpaceEffectRegisterPage from './SpaceEffectRegisterPage';
 const Registration = () => {
     return (
         <>
+        <SpaceEffectRegisterPage></SpaceEffectRegisterPage>
 
 
         </>
