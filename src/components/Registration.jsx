@@ -54,6 +54,12 @@ const Registration = () => {
                                     }} placeholder='Enter Your Password' id="password" />
                             </div>
 
+                            {/* Terms and Condition*/}
+                            <div className='flex jus-center gap-2 mt-3 ml-1'>
+                                <input id="terms" className='' type="checkbox" />
+                                <label className='text-white text-sm' htmlFor="terms">I agree to the <a href="#" className='text-purple-700'>Terms & Condition</a></label>
+                            </div>
+
                             
 
 
@@ -73,5 +79,5 @@ const Registration = () => {
 };
 
 export default Registration;
-//feat(form): add Email field to Registration form
+
 
