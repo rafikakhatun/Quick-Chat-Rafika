@@ -44,6 +44,16 @@ const Registration = () => {
                                     }} placeholder='Enter Your Email' id="email" />
                             </div>
 
+                            {/* Password */}
+                            <div className='flex flex-col space-y-1 mt-5'>
+                                <label className='text-white' htmlFor="password">Password</label>
+                                <input className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
+                                    style={{
+                                        backgroundColor: 'rgba(30, 14, 63, 0.5)',
+                                        border: '1px solid rgba(138, 43, 226, 0.3)'
+                                    }} placeholder='Enter Your Password' id="password" />
+                            </div>
+
                             
 
 
@@ -63,4 +73,5 @@ const Registration = () => {
 };
 
 export default Registration;
+//feat(form): add Email field to Registration form
 
