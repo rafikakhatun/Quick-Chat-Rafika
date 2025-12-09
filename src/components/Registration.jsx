@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SpaceEffectRegisterPage from './SpaceEffectRegisterPage';
 import { Link } from 'react-router-dom';
 import { Eye, Mail, User } from 'lucide-react';
 
 const Registration = () => {
+
+    const [showPassword,setShowPassword] = useState(false);
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -37,7 +39,7 @@ const Registration = () => {
                             {/* Name Field */}
                             <div className='relative flex flex-col space-y-1'>
                                 <label className='text-white' htmlFor="name">Full Name</label>
-                                <input className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
+                                <input type="name" className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
                                     style={{
                                         backgroundColor: 'rgba(30, 14, 63, 0.5)',
                                         border: '1px solid rgba(138, 43, 226, 0.3)'
@@ -48,7 +50,7 @@ const Registration = () => {
                             {/* Email Field */}
                             <div className='relative flex flex-col space-y-1 mt-5'>
                                 <label className='text-white' htmlFor="email">Email Address</label>
-                                <input className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
+                                <input type="email" className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
                                     style={{
                                         backgroundColor: 'rgba(30, 14, 63, 0.5)',
                                         border: '1px solid rgba(138, 43, 226, 0.3)'
@@ -59,7 +61,7 @@ const Registration = () => {
                             {/* Password */}
                             <div className='relative flex flex-col space-y-1 mt-5'>
                                 <label className='text-white' htmlFor="password">Password</label>
-                                <input className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
+                                <input type="password" className="w-full px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-300"
                                     style={{
                                         backgroundColor: 'rgba(30, 14, 63, 0.5)',
                                         border: '1px solid rgba(138, 43, 226, 0.3)'
