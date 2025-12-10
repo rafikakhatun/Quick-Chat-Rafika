@@ -32,6 +32,13 @@ const Registration = () => {
         // Temporary error object
         let newErrors = {};
 
+        // name validtion 
+         if(!name){
+            newErrors.name = "name is required";
+        } else if(!nameRegex.test(name)){
+            newErrors.name = "Enter a valid name"
+        }
+
     }
 
 
