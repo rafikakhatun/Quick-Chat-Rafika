@@ -4,8 +4,15 @@ import { Link } from 'react-router-dom';
 import { Eye, EyeClosed, EyeOff, Mail, User } from 'lucide-react';
 
 const Registration = () => {
-
+    // password hide and show state
     const [showPassword, setShowPassword] = useState(false);
+    // error object state 
+    const [error,setError] = useState({
+        name:"",
+        email:"",
+        password:""
+    })
+
 
     const handleRegister = (e) => {
         e.preventDefault()
