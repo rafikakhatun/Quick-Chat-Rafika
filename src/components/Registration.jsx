@@ -59,6 +59,8 @@ const Registration = () => {
             return;
         }
 
+        alert("sucess")
+
     }
 
 
