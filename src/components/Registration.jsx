@@ -7,7 +7,7 @@ const Registration = () => {
     // password hide and show state
     const [showPassword, setShowPassword] = useState(false);
     // error object state 
-    const [error, setError] = useState({
+    const [error, setErrors] = useState({
         name: "",
         email: "",
         password: ""
@@ -51,6 +51,12 @@ const Registration = () => {
             newErrors.password = "password is required";
         }else if(!passwordRegex.test(password)){
             newErrors.password = "enter a valid password"
+        }
+
+         // If there is any error → show errors
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
         }
 
     }
