@@ -7,10 +7,10 @@ const Registration = () => {
     // password hide and show state
     const [showPassword, setShowPassword] = useState(false);
     // error object state 
-    const [error,setError] = useState({
-        name:"",
-        email:"",
-        password:""
+    const [error, setError] = useState({
+        name: "",
+        email: "",
+        password: ""
     })
 
     // name regex patterns 
@@ -20,15 +20,13 @@ const Registration = () => {
     // password regex patterns
     const password = /^(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{6,}$/; // min 6 chars + 1 special char
 
-
-
-
-
-
-
+    // ------------ form submit handler------------//
     const handleRegister = (e) => {
         e.preventDefault()
-        alert("Register successfull")
+
+        // get field values manually
+        const name = document.getElementById("name").value.trim();
+
     }
 
 
@@ -112,7 +110,7 @@ const Registration = () => {
                                     boxShadow: '0 4px 15px rgba(76, 0, 255, 0.4)'
                                 }}
                             >
-                                Register 
+                                Register
                             </button>
                             {/* Already have an account? Sign In link */}
 
