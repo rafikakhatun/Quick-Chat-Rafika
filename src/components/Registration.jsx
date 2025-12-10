@@ -141,6 +141,11 @@ const Registration = () => {
 
                                 />
 
+                                {/* show error msg*/}
+                                    {errors.password && (
+                                    <p className="text-red-500 text-sm ml-1">{errors.password}</p>
+                                )}
+
                                 <div className='absolute top-10 right-3 text-white'
                                     onClick={() => setShowPassword(!showPassword)}>
                                     {showPassword ? (<EyeOff></EyeOff>) : (<Eye ></Eye>)}
