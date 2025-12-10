@@ -15,6 +15,8 @@ const Registration = () => {
         password: ""
     })
 
+
+
     // name regex patterns 
     const nameRegex = /^[A-Za-z\s]{3,}$/; // only letters, min 3 chars
     //email regex pattern 
@@ -69,6 +71,8 @@ const Registration = () => {
             button: "OK",
             timer: 2000
         });
+
+         console.log("registration Data", {name,email,password});
 
 
 
