@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import SpaceEffectRegisterPage from './SpaceEffectRegisterPage';
 import { Link } from 'react-router-dom';
 import { Eye, EyeClosed, EyeOff, Mail, User } from 'lucide-react';
+import swal from 'sweetalert';
+
 
 const Registration = () => {
     // password hide and show state
@@ -33,33 +35,42 @@ const Registration = () => {
         let newErrors = {};
 
         // name validtion 
-         if(!name){
+        if (!name) {
             newErrors.name = "name is required";
-        } else if(!nameRegex.test(name)){
+        } else if (!nameRegex.test(name)) {
             newErrors.name = "Enter a valid name"
         }
 
         // email validation 
-        if(!email){
+        if (!email) {
             newErrors.email = "email is required";
-        }else if(!emailRegex.test(email)){
+        } else if (!emailRegex.test(email)) {
             newErrors.email = "enter a valid email"
         }
 
         // password validation 
-        if(!password){
+        if (!password) {
             newErrors.password = "password is required";
-        }else if(!passwordRegex.test(password)){
+        } else if (!passwordRegex.test(password)) {
             newErrors.password = "enter a valid password"
         }
 
-         // If there is any error → show errors
+        // If there is any error → show errors
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
             return;
         }
 
-        alert("sucess")
+        // Success → Show SweetAlert
+        swal({
+            title: "Success!",
+            text: "Registration completed successfully!",
+            icon: "success",
+            button: "OK",
+            timer: 2000
+        });
+
+
 
     }
 
