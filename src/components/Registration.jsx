@@ -123,6 +123,10 @@ const Registration = () => {
                                         backgroundColor: 'rgba(30, 14, 63, 0.5)',
                                         border: '1px solid rgba(138, 43, 226, 0.3)'
                                     }} placeholder='Enter Your Email' id="email" />
+                                    {/* show error msg*/}
+                                    {errors.email && (
+                                    <p className="text-red-500 text-sm ml-1">{errors.email}</p>
+                                )}
                                 <Mail className='absolute top-10 right-3 text-white' ></Mail>
                             </div>
 
