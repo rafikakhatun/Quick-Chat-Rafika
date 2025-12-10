@@ -13,6 +13,13 @@ const Registration = () => {
         password:""
     })
 
+    // name regex patterns 
+    const nameRegex = /^[A-Za-z\s]{3,}$/; // only letters, min 3 chars
+
+
+
+
+
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -100,7 +107,7 @@ const Registration = () => {
                                     boxShadow: '0 4px 15px rgba(76, 0, 255, 0.4)'
                                 }}
                             >
-                                Register
+                                Register 
                             </button>
                             {/* Already have an account? Sign In link */}
 
