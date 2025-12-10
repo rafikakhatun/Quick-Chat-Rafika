@@ -39,6 +39,13 @@ const Registration = () => {
             newErrors.name = "Enter a valid name"
         }
 
+        // email validation 
+        if(!email){
+            newErrors.email = "email is required";
+        }else if(!emailRegex.test(email)){
+            newErrors.email = "enter a valid email"
+        }
+
     }
 
 
