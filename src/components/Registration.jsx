@@ -26,6 +26,7 @@ const Registration = () => {
 
         // get field values manually
         const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
 
     }
 
