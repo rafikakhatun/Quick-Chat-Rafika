@@ -15,6 +15,8 @@ const Registration = () => {
 
     // name regex patterns 
     const nameRegex = /^[A-Za-z\s]{3,}$/; // only letters, min 3 chars
+    //email regex pattern 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // basic email regex
 
 
 
