@@ -24,9 +24,10 @@ const Registration = () => {
     const handleRegister = (e) => {
         e.preventDefault()
 
-        // get field values manually
+        // get input field values manually
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
 
     }
 
