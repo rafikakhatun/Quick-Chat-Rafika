@@ -9,7 +9,7 @@ const Registration = () => {
     // password hide and show state
     const [showPassword, setShowPassword] = useState(false);
     // error object state 
-    const [error, setErrors] = useState({
+    const [errors, setErrors] = useState({
         name: "",
         email: "",
         password: ""
@@ -106,6 +106,12 @@ const Registration = () => {
                                         backgroundColor: 'rgba(30, 14, 63, 0.5)',
                                         border: '1px solid rgba(138, 43, 226, 0.3)'
                                     }} placeholder='Enter Your name' id="name" />
+                                    {/* show error msg*/}
+                                    {errors.name && (
+                                    <p className="text-red-500 text-sm ml-1">{errors.name}</p>
+                                )}
+
+
                                 <User className='absolute text-white top-10 right-3'></User>
                             </div>
 
