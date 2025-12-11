@@ -3,6 +3,7 @@ import ParticlesBackground from "./ParticlesBackgroundLoginPage";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ParticlesBackgroundLoginPage from "./ParticlesBackgroundLoginPage";
+import swal from 'sweetalert';
 
 const Login = () => {
 
@@ -53,8 +54,8 @@ const Login = () => {
         // password validation 
         if (!password) {
             newErrors.password = "password is required";
-        } else if (!emailRegex.test(email)) {
-            newErrors.email = "enter a valid email";
+        } else if (!passwordRegex.test(password)) {
+            newErrors.password = "enter a valid password";
         }
 
         // if there is any error / show error
@@ -62,6 +63,14 @@ const Login = () => {
             setErrors(newErrors)
             return;
         }
+         // Success → Show SweetAlert
+        swal({
+            title: "Success!",
+            text: "Registration completed successfully!",
+            icon: "success",
+            button: "OK",
+            timer: 4000
+        });
 
 
 
