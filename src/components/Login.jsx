@@ -35,31 +35,32 @@ const Login = () => {
 
 
         // Temporary error object
-        let newError = {}
+        let newErrors = {}
         // name validation
         if (!name) {
-            newError.name = "name is required";
+            newErrors.name = "name is required";
         }else if(!nameRegex.test(name)){
-            newError.name = "Enter a valid name";
+            newErrors.name = "Enter a valid name";
 
         }
         // email validation
         if(!email){
-            newError.email = "email is required";
+            newErrors.email = "email is required";
         }else if(!emailRegex.test(email)){
-            newError.email = "enter a valid email";
+            newErrors.email = "enter a valid email";
         } 
 
         // password validation 
         if(!password){
-            newError.password = "password is required";
+            newErrors.password = "password is required";
         }else if (!emailRegex.test(email)){
-            newError.email = "enter a valid email";
+            newErrors.email = "enter a valid email";
         }
 
         // if there is any error / show error
-        if(Object.keys(newError).length > 0){
-            setErr
+        if(Object.keys(newErrors).length > 0){
+            setErrors(newErrors)
+            return;
         }
 
 
