@@ -29,6 +29,13 @@ const Login = () => {
 
         // Temporary error object
         let newError = {}
+        // name validation
+        if (!name) {
+            newError.name = "name is required"
+        }else if(!nameRegex.test(name)){
+            newError.name = "Enter a valid name"
+
+        }
 
 
 
