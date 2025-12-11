@@ -10,9 +10,16 @@ const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
-    const handleSubmit = () => {
-        alert("sign In")
+    const handleSubmitLogin = (e) => {
+        e.preventDefault();
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+        console.log("registration data", {name,email,password})
 
+
+        
+ 
     }
 
 
@@ -36,8 +43,8 @@ const Login = () => {
                     <form action="" className="space-y-4 text-sm">
                         {/*UserName */}
                         <div className="relative w-full">
-                            <label className="text-white" htmlFor="userName">Username</label>
-                            <input type="text" id="userName" placeholder="Enter your name" className="w-full mt-2 px-4 py-2 rounded-md  outline-none shadow border-[0.5px] border-gray-50 text-white " style={{
+                            <label className="text-white" htmlFor="name">Username</label>
+                            <input type="text" id="name" placeholder="Enter your name" className="w-full mt-2 px-4 py-2 rounded-md  outline-none shadow border-[0.5px] border-gray-50 text-white " style={{
                                 backgroundColor: 'rgba(255, 255, 255, 0.08)',
                                 color: 'white',
                                 border: '1px solid rgba(255, 255, 255, 0.2)'
@@ -89,7 +96,7 @@ const Login = () => {
 
                             </div>
                         </div>
-                        <button onClick={handleSubmit} className="w-full bg-blue-600 text-white rounded-md px-4 py-2 font-semibold mt-2">Sign In</button>
+                        <button onClick={handleSubmitLogin} type="submit" className="w-full bg-blue-600 text-white rounded-md px-4 py-2 font-semibold mt-2">Sign In</button>
                     </form>
 
                     {/* Sign-up prompt for users who don't have an account */}

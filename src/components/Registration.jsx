@@ -25,7 +25,7 @@ const Registration = () => {
     const passwordRegex = /^(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{6,}$/; // min 6 chars + 1 special char
 
     // ------------ form submit handler------------//
-    const handleRegister = (e) => {
+    const handleSubmitRegister = (e) => {
         e.preventDefault()
 
         // get input field values manually
@@ -101,7 +101,7 @@ const Registration = () => {
                             textShadow: '0 0 10px rgba(138, 43, 226, 0.5)'
                         }}>Create Account</h2>
 
-                        <form action="">
+                        <form action="" onSubmit={handleSubmitRegister}>
                             {/* Name Field */}
                             <div className='relative flex flex-col space-y-1'>
                                 <label className='text-white' htmlFor="name">Full Name</label>
@@ -166,7 +166,6 @@ const Registration = () => {
 
                             {/* register button*/}
                             <button
-                                onClick={handleRegister}
                                 type="submit"
                                 className="w-full mt-6 py-3 px-4 rounded-lg font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 transition duration-300"
                                 style={{
