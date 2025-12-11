@@ -10,13 +10,23 @@ const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
+    // name regex patterns 
+    const nameRegex = /^[A-Za-z\s]{3,}$/; // only letters, min 3 chars
+    //email regex pattern 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // basic email regex
+    // password regex patterns
+    const passwordRegex = /^(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{6,}$/; // min 6 chars + 1 special char
+
+
     const handleSubmitLogin = (e) => {
         e.preventDefault();
+        // all input field value get
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value.trim();
         console.log("registration data", {name,email,password})
 
+       
 
         
  
