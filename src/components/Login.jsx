@@ -43,6 +43,13 @@ const Login = () => {
             newError.email = "enter a valid email";
         } 
 
+        // password validation 
+        if(!password){
+            newError.password = "password is required";
+        }else if (!emailRegex.test(email)){
+            newError.email = "enter a valid email";
+        }
+
     
 
 
