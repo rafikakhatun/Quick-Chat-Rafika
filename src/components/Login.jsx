@@ -11,9 +11,9 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
 
     const [errors, setErrors] = useState({
-       name:"",
-       email:"",
-       password:""
+        name: "",
+        email: "",
+        password: ""
 
     })
 
@@ -39,32 +39,32 @@ const Login = () => {
         // name validation
         if (!name) {
             newErrors.name = "name is required";
-        }else if(!nameRegex.test(name)){
+        } else if (!nameRegex.test(name)) {
             newErrors.name = "Enter a valid name";
 
         }
         // email validation
-        if(!email){
+        if (!email) {
             newErrors.email = "email is required";
-        }else if(!emailRegex.test(email)){
+        } else if (!emailRegex.test(email)) {
             newErrors.email = "enter a valid email";
-        } 
+        }
 
         // password validation 
-        if(!password){
+        if (!password) {
             newErrors.password = "password is required";
-        }else if (!emailRegex.test(email)){
+        } else if (!emailRegex.test(email)) {
             newErrors.email = "enter a valid email";
         }
 
         // if there is any error / show error
-        if(Object.keys(newErrors).length > 0){
+        if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors)
             return;
         }
 
 
-    
+
 
 
 
@@ -99,6 +99,12 @@ const Login = () => {
                                 color: 'white',
                                 border: '1px solid rgba(255, 255, 255, 0.2)'
                             }} />
+                            {/* show error msg*/}
+                            {
+                                errors.name && (<p className="text-red-500 text-sm mt-1 ml-1">{errors.name}</p>
+
+                                )}
+
                             <User className="absolute top-10 right-3 items-center text-white" size={20} />
 
                         </div>
