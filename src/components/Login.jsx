@@ -24,12 +24,16 @@ const Login = () => {
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value.trim();
-        console.log("registration data", {name,email,password})
+        console.log("registration data", { name, email, password })
 
-       
 
-        
- 
+        // Temporary error object
+        let newError = {}
+
+
+
+
+
     }
 
 
