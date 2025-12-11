@@ -31,11 +31,19 @@ const Login = () => {
         let newError = {}
         // name validation
         if (!name) {
-            newError.name = "name is required"
+            newError.name = "name is required";
         }else if(!nameRegex.test(name)){
-            newError.name = "Enter a valid name"
+            newError.name = "Enter a valid name";
 
         }
+        // email validation
+        if(!email){
+            newError.email = "email is required";
+        }else if(!emailRegex.test(email)){
+            newError.email = "enter a valid email";
+        } 
+
+    
 
 
 
