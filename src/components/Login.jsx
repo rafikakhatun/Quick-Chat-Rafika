@@ -143,6 +143,12 @@ const Login = () => {
                             >
                                 {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                             </div>
+                            {/* show error msg*/}
+                            {
+                                errors.password && (<p className="text-red-500 text-sm mt-1 ml-1">{errors.password}</p>
+
+                                )}
+
                         </div>
 
                         {/*Remember me and forgot password */}
