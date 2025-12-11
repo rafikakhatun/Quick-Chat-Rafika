@@ -40,7 +40,7 @@ const Login = () => {
                     border: '1px solid rgba(255, 255, 255, 0.15)'
                 }}>
                     <h2 className="text-xl font-semibold mb-4 text-center text-white drop-shadow ">Quick Chat with Rafika</h2>
-                    <form action="" className="space-y-4 text-sm">
+                    <form action="" onSubmit={handleSubmitLogin} className="space-y-4 text-sm">
                         {/*UserName */}
                         <div className="relative w-full">
                             <label className="text-white" htmlFor="name">Username</label>
@@ -96,7 +96,7 @@ const Login = () => {
 
                             </div>
                         </div>
-                        <button onClick={handleSubmitLogin} type="submit" className="w-full bg-blue-600 text-white rounded-md px-4 py-2 font-semibold mt-2">Sign In</button>
+                        <button type="submit" className="w-full bg-blue-600 text-white rounded-md px-4 py-2 font-semibold mt-2">Sign In</button>
                     </form>
 
                     {/* Sign-up prompt for users who don't have an account */}
