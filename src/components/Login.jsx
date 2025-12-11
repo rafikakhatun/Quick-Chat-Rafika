@@ -10,6 +10,13 @@ const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
+    const [errors, setErrors] = useState({
+       name:"",
+       email:"",
+       password:""
+
+    })
+
     // name regex patterns 
     const nameRegex = /^[A-Za-z\s]{3,}$/; // only letters, min 3 chars
     //email regex pattern 
@@ -49,6 +56,12 @@ const Login = () => {
         }else if (!emailRegex.test(email)){
             newError.email = "enter a valid email";
         }
+
+        // if there is any error / show error
+        if(Object.keys(newError).length > 0){
+            setErr
+        }
+
 
     
 
