@@ -117,6 +117,12 @@ const Login = () => {
                                 color: 'white',
                                 border: '1px solid rgba(255, 255, 255, 0.2)'
                             }} />
+                            {/* show error msg*/}
+                            {
+                                errors.email && (<p className="text-red-500 text-sm mt-1 ml-1">{errors.email}</p>
+
+                                )}
+
                             <Mail className="absolute top-10 right-3 items-center text-white" size={20} />
 
                         </div>
