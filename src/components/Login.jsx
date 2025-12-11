@@ -8,11 +8,10 @@ const Login = () => {
 
     // password show hide state
 
-    const [showPassword, setShowPassword] = useState(null);
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleSubmit = () => {
         alert("sign In")
-
 
     }
 

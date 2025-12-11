@@ -69,7 +69,7 @@ const Registration = () => {
             text: "Registration completed successfully!",
             icon: "success",
             button: "OK",
-            timer: 2000
+            timer: 4000
         });
 
          console.log("registration Data", {name,email,password});
