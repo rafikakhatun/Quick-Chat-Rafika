@@ -18,8 +18,7 @@ const Login = () => {
 
     })
 
-    // name regex patterns 
-    const nameRegex = /^[A-Za-z\s]{3,}$/; // only letters, min 3 chars
+    
     //email regex pattern 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // basic email regex
     // password regex patterns
@@ -27,9 +26,10 @@ const Login = () => {
 
 
     const handleSubmitLogin = (e) => {
+        alert("login")
         e.preventDefault();
         // all input field value get
-        const name = document.getElementById("name").value.trim();
+        
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value.trim();
         console.log("registration data", { name, email, password })
@@ -37,13 +37,7 @@ const Login = () => {
 
         // Temporary error object
         let newErrors = {}
-        // name validation
-        if (!name) {
-            newErrors.name = "name is required";
-        } else if (!nameRegex.test(name)) {
-            newErrors.name = "Enter a valid name";
-
-        }
+        
         // email validation
         if (!email) {
             newErrors.email = "email is required";
