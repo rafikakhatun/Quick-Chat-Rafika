@@ -12,11 +12,12 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
 
     const [errors, setErrors] = useState({
-        name: "",
         email: "",
         password: ""
 
     })
+
+    
 
     
     //email regex pattern 
@@ -32,7 +33,7 @@ const Login = () => {
         
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value.trim();
-        console.log("registration data", { name, email, password })
+        console.log("registration data", { email, password })
 
 
         // Temporary error object
@@ -66,7 +67,7 @@ const Login = () => {
             timer: 4000
         });
 
-        console.log("Login Data",{name,email,password})
+        console.log("Login Data",{email,password})
 
 
 
