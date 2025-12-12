@@ -72,6 +72,8 @@ const Login = () => {
             timer: 4000
         });
 
+        console.log("Login Data",{name,email,password})
+
 
 
 
@@ -100,27 +102,10 @@ const Login = () => {
                 }}>
                     <h2 className="text-xl font-semibold mb-4 text-center text-white drop-shadow ">Quick Chat with Rafika</h2>
                     <form action="" onSubmit={handleSubmitLogin} className="space-y-4 text-sm">
-                        {/*UserName */}
-                        <div className="relative w-full">
-                            <label className="text-white" htmlFor="name">Username</label>
-                            <input type="text" id="name" placeholder="Enter your name" className="w-full mt-2 px-4 py-2 rounded-md  outline-none shadow border-[0.5px] border-gray-50 text-white " style={{
-                                backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                                color: 'white',
-                                border: '1px solid rgba(255, 255, 255, 0.2)'
-                            }} />
-                            {/* show error msg*/}
-                            {
-                                errors.name && (<p className="text-red-500 text-sm mt-1 ml-1">{errors.name}</p>
-
-                                )}
-
-                            <User className="absolute top-10 right-3 items-center text-white" size={20} />
-
-                        </div>
-
+                       
                         {/*Email*/}
                         <div className="relative w-full">
-                            <label className="text-white" htmlFor="email">Email</label>
+                            <label className="text-white" htmlFor="email">Email ID</label>
                             <input type="email" id="email" placeholder="Enter your email" className="w-full mt-2 px-4 py-2 rounded-md  outline-none shadow border-[0.5px] border-gray-50 text-white " style={{
                                 backgroundColor: 'rgba(255, 255, 255, 0.08)',
                                 color: 'white',
@@ -173,7 +158,7 @@ const Login = () => {
 
                             </div>
                         </div>
-                        <button type="submit" className="w-full bg-blue-600 text-white rounded-md px-4 py-2 font-semibold mt-2">Sign In</button>
+                        <button type="submit" className="w-full bg-blue-600 text-white rounded-md px-4 py-2 font-semibold mt-2">Login</button>
                     </form>
 
                     {/* Sign-up prompt for users who don't have an account */}
